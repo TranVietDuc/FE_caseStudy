@@ -1,0 +1,7 @@
+<div id="chatFrame">
+  <div *ngFor="let message of messagelist; index as i" >
+  <p class="messageFrame" *ngIf="i<= 6" id="messageFrame"> {{message.name}}: <strong> {{message.content}} </strong> </p>
+</div>
+</div>
+
+

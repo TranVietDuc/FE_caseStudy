@@ -1,0 +1,14 @@
+<form [formGroup]="sendForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    Name:
+    <input type="text" class="form-control" formControlName="name" placeholder="Name">
+    <div *ngIf="sendForm.get('name').invalid && sendForm.get('name').touched"> Name is required</div>
+  </div>
+  <div class="row">
+    Message:
+    <input type="text" class="form-control" formControlName="content" placeholder="Message">
+  </div>
+  <br>
+  <button class="btn btn-primary" type="submit">Send</button>
+</form>
+
